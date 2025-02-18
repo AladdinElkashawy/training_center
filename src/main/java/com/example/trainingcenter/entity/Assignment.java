@@ -3,6 +3,7 @@ package com.example.trainingcenter.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -14,8 +15,7 @@ import java.time.LocalDate;
 @Table(name = "assignment")
 public class Assignment {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "assignment_id_gen")
-    @SequenceGenerator(name = "assignment_id_gen", sequenceName = "assignment_assignment_id_seq", allocationSize = 1)
+    @ColumnDefault("nextval('assignment_assignment_id_seq')")
     @Column(name = "assignment_id", nullable = false)
     private Integer id;
 

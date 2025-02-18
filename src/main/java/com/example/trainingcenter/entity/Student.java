@@ -1,8 +1,12 @@
 package com.example.trainingcenter.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.ColumnDefault;
 
 import java.time.LocalDate;
 
@@ -12,8 +16,7 @@ import java.time.LocalDate;
 @Table(name = "student")
 public class Student {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "student_id_gen")
-    @SequenceGenerator(name = "student_id_gen", sequenceName = "student_student_id_seq", allocationSize = 1)
+    @ColumnDefault("nextval('student_student_id_seq')")
     @Column(name = "student_id", nullable = false)
     private Integer id;
 

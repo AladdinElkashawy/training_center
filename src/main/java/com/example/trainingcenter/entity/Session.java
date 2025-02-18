@@ -3,6 +3,7 @@ package com.example.trainingcenter.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -14,8 +15,7 @@ import java.time.Instant;
 @Table(name = "session")
 public class Session {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "session_id_gen")
-    @SequenceGenerator(name = "session_id_gen", sequenceName = "session_session_id_seq", allocationSize = 1)
+    @ColumnDefault("nextval('session_session_id_seq')")
     @Column(name = "session_id", nullable = false)
     private Integer id;
 

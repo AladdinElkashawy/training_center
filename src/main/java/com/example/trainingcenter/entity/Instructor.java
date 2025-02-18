@@ -3,6 +3,9 @@ package com.example.trainingcenter.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 @Getter
 @Setter
@@ -10,10 +13,14 @@ import lombok.Setter;
 @Table(name = "instructor")
 public class Instructor {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "instructor_id_gen")
-    @SequenceGenerator(name = "instructor_id_gen", sequenceName = "instructor_instructor_id_seq", allocationSize = 1)
+    @ColumnDefault("nextval('instructor_instructor_id_seq')")
     @Column(name = "instructor_id", nullable = false)
     private Integer id;
+
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JoinColumn(name = "staff_id", nullable = false)
+    private Staff staff;
 
     @Column(name = "biography", length = Integer.MAX_VALUE)
     private String biography;
