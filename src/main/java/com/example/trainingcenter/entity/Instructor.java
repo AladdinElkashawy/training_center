@@ -13,8 +13,8 @@ import org.hibernate.annotations.OnDeleteAction;
 @Table(name = "instructor")
 public class Instructor {
     @Id
-    @ColumnDefault("nextval('instructor_instructor_id_seq')")
-    @Column(name = "instructor_id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "instructor_id")
     private Integer id;
 
     @OneToOne(fetch = FetchType.LAZY, optional = false)

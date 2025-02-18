@@ -15,7 +15,7 @@ import java.time.LocalDate;
 @Table(name = "student_assignment")
 public class StudentAssignment {
     @Id
-    @ColumnDefault("nextval('student_assignment_student_assignment_id_seq')")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "student_assignment_id", nullable = false)
     private Integer id;
 

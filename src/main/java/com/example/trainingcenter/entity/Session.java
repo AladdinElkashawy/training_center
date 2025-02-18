@@ -15,8 +15,8 @@ import java.time.Instant;
 @Table(name = "session")
 public class Session {
     @Id
-    @ColumnDefault("nextval('session_session_id_seq')")
-    @Column(name = "session_id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "session_id")
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)

@@ -15,8 +15,8 @@ import java.time.LocalDate;
 @Table(name = "assignment")
 public class Assignment {
     @Id
-    @ColumnDefault("nextval('assignment_assignment_id_seq')")
-    @Column(name = "assignment_id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "assignment_id")
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
