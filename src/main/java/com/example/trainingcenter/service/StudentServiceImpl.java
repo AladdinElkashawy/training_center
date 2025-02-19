@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class StudentServiceImpl implements StudentService {
@@ -26,13 +27,27 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Student addStudent(Student student){
+    public Student addStudent(Student student) throws EmailExistException {
+           Optional<Student> st1=studentRepository.findByEmail(student.getEmail());
+            if(st1.isPresent()){
+                throw new EmailExistException("Email already exist");
+            }
             return studentRepository.save(student);
-    }
+
+        }
 
     @Override
-    public Student updateStudent(Student student) {
-        return studentRepository.save(student);
+    public Student updateStudent(Student student) throws EmailExistException {
+        Optional<Student> st=studentRepository.findById(student.getId());
+        if(st.isPresent()){
+            if(!st.get().getEmail().equals(student.getEmail())){
+                if(studentRepository.findByEmail(student.getEmail()).isPresent()) {
+                    throw new EmailExistException("Email already exist");
+                }
+            }
+            return studentRepository.save(student);
+        }
+        throw new StudentNotFoundException("Student not found");
     }
 
     @Override
