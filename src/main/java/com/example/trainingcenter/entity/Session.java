@@ -1,5 +1,6 @@
 package com.example.trainingcenter.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,6 +21,7 @@ public class Session {
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "course_id")
     private Course course;
