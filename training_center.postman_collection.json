@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "200f15fb-8b9d-407e-9030-b7de981cee48",
+		"_postman_id": "a5a5dd83-3161-490e-a7a8-faa839a8d018",
 		"name": "training_center",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "40851211"
+		"_exporter_id": "41966260"
 	},
 	"item": [
 		{
@@ -247,6 +247,130 @@
 								"staffs",
 								"delete",
 								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Instructor",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/instructors/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"instructors",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/instructors/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"instructors",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"biography\": \"Mohamed Kareem is a Trainer with over 5 years of experience in Python and Machine Learning.\",\r\n    \"staff\": {\r\n        \"firstName\": \"Mohamed\",\r\n        \"lastName\": \"Kareem\",\r\n        \"email\": \"mohamed.kareem@gmail.com\",\r\n        \"phoneNumber\": \"01025667786\",\r\n        \"jobPosition\": \"Instructor\",\r\n        \"hireDate\": \"2020-03-20\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/instructors/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"instructors",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 5,\r\n    \"biography\": \"Mohamed Kareem is a Trainer with over 7 years of experience in Python and Machine Learning.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/instructors/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"instructors",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/instructors/delete/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"instructors",
+								"delete",
+								"5"
 							]
 						}
 					},

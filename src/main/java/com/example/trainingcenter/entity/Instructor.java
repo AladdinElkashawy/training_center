@@ -1,5 +1,6 @@
 package com.example.trainingcenter.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,6 +19,7 @@ public class Instructor {
     private Integer id;
 
     @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @JsonIgnore
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "staff_id", nullable = false)
     private Staff staff;
