@@ -18,7 +18,7 @@ public class Instructor {
     @Column(name = "instructor_id")
     private Integer id;
 
-    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @OneToOne
     @JsonIgnore
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "staff_id", nullable = false)

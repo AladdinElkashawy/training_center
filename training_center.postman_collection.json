@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "200f15fb-8b9d-407e-9030-b7de981cee48",
+		"_postman_id": "a5a5dd83-3161-490e-a7a8-faa839a8d018",
 		"name": "training_center",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "40851211"
+		"_exporter_id": "41966260"
 	},
 	"item": [
 		{
@@ -56,7 +56,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": " {\r\n        \r\n        \"firstName\": \"Badr\",\r\n        \"lastName\": \"Elkashawy\",\r\n        \"email\": \"Badr.elkashawy4@gmail.com\",\r\n        \"phoneNumber\": \"54343\",\r\n        \"dateOfBirth\": \"2000-09-25\",\r\n        \"university\": \"Ain Shams\",\r\n        \"college\": \"Computer Science\",\r\n        \"graduationGrade\": \"3.2\"\r\n    }",
+							"raw": "{\r\n    \"firstName\": \"Mazen\",\r\n    \"lastName\": \"Tarek\",\r\n    \"email\": \"Mazen.tarek@gmail.com\",\r\n    \"phoneNumber\": \"56566516\",\r\n    \"dateOfBirth\": \"2001-04-11\",\r\n    \"university\": \"cairo\",\r\n    \"college\": \"Engineering\",\r\n    \"graduationGrade\": \"2.7\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -64,12 +64,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8081/students/add",
+							"raw": "http://localhost:8080/students/add",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8081",
+							"port": "8080",
 							"path": [
 								"students",
 								"add"
@@ -85,7 +85,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "    {\r\n        \"id\": 3,\r\n        \"firstName\": \"Islam\",\r\n        \"lastName\": \"Ali\",\r\n        \"email\": \"alaadin.elkashawy@gmail.com\",\r\n        \"phoneNumber\": \"9876543212\",\r\n        \"dateOfBirth\": \"2001-02-15\",\r\n        \"university\": \"Ain Shams\",\r\n        \"college\": \"Computer Science\",\r\n        \"graduationGrade\": \"3.2\"\r\n    }",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"firstName\": \"Mo'men\",\r\n    \"lastName\": \"Alaa\",\r\n    \"email\": \"momen.alaa@gmail.com\",\r\n    \"phoneNumber\": \"9876543210\",\r\n    \"dateOfBirth\": \"2001-04-11\",\r\n    \"university\": \"Helwan\",\r\n    \"college\": \"Engineering\",\r\n    \"graduationGrade\": \"3.6\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -93,12 +93,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8081/students/update",
+							"raw": "http://localhost:8080/students/update",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8081",
+							"port": "8080",
 							"path": [
 								"students",
 								"update"
@@ -113,12 +113,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8081/students/delete/15",
+							"raw": "http://localhost:8080/students/delete/15",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8081",
+							"port": "8080",
 							"path": [
 								"students",
 								"delete",
@@ -139,12 +139,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8081/staffs/all",
+							"raw": "http://localhost:8080/staffs/all",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8081",
+							"port": "8080",
 							"path": [
 								"staffs",
 								"all"
@@ -159,12 +159,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8081/staffs/1",
+							"raw": "http://localhost:8080/staffs/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8081",
+							"port": "8080",
 							"path": [
 								"staffs",
 								"1"
@@ -188,12 +188,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8081/staffs/add",
+							"raw": "http://localhost:8080/staffs/add",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8081",
+							"port": "8080",
 							"path": [
 								"staffs",
 								"add"
@@ -209,7 +209,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 8,\r\n    \"firstName\": \"Lol\",\r\n    \"lastName\": \"HH\",\r\n    \"email\": \"ahmed.ezzat2@gmail.com\",\r\n    \"phoneNumber\": \"01025663286\",\r\n    \"jobPosition\": \"Manager\",\r\n    \"hireDate\": \"2020-01-15\"\r\n}",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"firstName\": \"Mo'men\",\r\n    \"lastName\": \"Alaa\",\r\n    \"email\": \"momen.alaa@gmail.com\",\r\n    \"phoneNumber\": \"9876543210\",\r\n    \"dateOfBirth\": \"2001-04-11\",\r\n    \"university\": \"Helwan\",\r\n    \"college\": \"Engineering\",\r\n    \"graduationGrade\": \"3.6\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -217,14 +217,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8081/staffs/update",
+							"raw": "http://localhost:8080/students/update",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8081",
+							"port": "8080",
 							"path": [
-								"staffs",
+								"students",
 								"update"
 							]
 						}
@@ -237,16 +237,415 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8081/staffs/delete/8",
+							"raw": "http://localhost:8080/staffs/delete/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"staffs",
+								"delete",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Instructor",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/instructors/all",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8081",
 							"path": [
-								"staffs",
+								"instructors",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/instructors/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"instructors",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"biography\": \"Mohamed Kareem is a Trainer with over 5 years of experience in Python and Machine Learning.\",\r\n    \"staff\": {\r\n        \"firstName\": \"Mohamed\",\r\n        \"lastName\": \"Kareem\",\r\n        \"email\": \"mohamed.kareem@gmail.com\",\r\n        \"phoneNumber\": \"01025667786\",\r\n        \"jobPosition\": \"Instructor\",\r\n        \"hireDate\": \"2020-03-20\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/instructors/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"instructors",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 5,\r\n    \"biography\": \"Mohamed Kareem is a Trainer with over 7 years of experience in Python and Machine Learning.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/instructors/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"instructors",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/instructors/delete/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"instructors",
 								"delete",
-								"8"
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Instructor Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/instructors/instructor/courses?instructorId=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"instructors",
+								"instructor",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "instructorId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/courses/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"courses",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/courses/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"courses",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"React.js\",\r\n    \"description\": \"Learn HTML, CSS, JavaScript, React.js and modern frameworks for building responsive websites.\",\r\n    \"duration\": 50,\r\n    \"startDate\": \"2025-03-10\",\r\n    \"endDate\": \"2025-05-20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/courses/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"courses",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 7,\r\n    \"title\": \"React.js\",\r\n    \"description\": \"Learn HTML, CSS, JavaScript, React.js and modern frameworks for building responsive websites.\",\r\n    \"duration\": 60,\r\n    \"startDate\": \"2025-03-10\",\r\n    \"endDate\": \"2025-05-20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/courses/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"courses",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/courses/delete/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"courses",
+								"delete",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Session",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/sessions/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"sessions",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/sessions/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"sessions",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sessionDate\": \"2025-03-14T20:00:00Z\",\r\n    \"location\": \"Room 105\",\r\n    \"sessionTopic\": \"Machine Learning\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/sessions/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"sessions",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"6\",\r\n    \"sessionDate\": \"2025-03-14T20:00:00Z\",\r\n    \"location\": \"Room 106\",\r\n    \"sessionTopic\": \"Machine Learning\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/sessions/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"sessions",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/sessions/delete/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"sessions",
+								"delete",
+								"6"
 							]
 						}
 					},

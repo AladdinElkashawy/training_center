@@ -20,7 +20,7 @@ public class Session {
     @Column(name = "session_id")
     private Integer id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JsonIgnore
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "course_id")

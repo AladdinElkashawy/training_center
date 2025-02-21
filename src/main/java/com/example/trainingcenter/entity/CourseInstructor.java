@@ -17,12 +17,12 @@ public class CourseInstructor {
     @Column(name = "course_instructor_id")
     private Integer id;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne
     @OnDelete(action = OnDeleteAction.SET_NULL)
     @JoinColumn(name = "instructor_id", nullable = false)
     private Instructor instructor;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "course_id", nullable = false)
     private Course course;
