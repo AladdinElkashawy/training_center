@@ -18,8 +18,7 @@ public class Instructor {
     @Column(name = "instructor_id")
     private Integer id;
 
-    @OneToOne
-    @JsonIgnore
+    @OneToOne(cascade = CascadeType.PERSIST)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "staff_id", nullable = false)
     private Staff staff;

@@ -139,12 +139,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/staffs/all",
+							"raw": "http://localhost:8081/staffs/all",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8081",
 							"path": [
 								"staffs",
 								"all"
@@ -159,12 +159,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/staffs/1",
+							"raw": "http://localhost:8081/staffs/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8081",
 							"path": [
 								"staffs",
 								"1"
@@ -304,7 +304,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"biography\": \"Mohamed Kareem is a Trainer with over 5 years of experience in Python and Machine Learning.\",\r\n    \"staff\": {\r\n        \"firstName\": \"Mohamed\",\r\n        \"lastName\": \"Kareem\",\r\n        \"email\": \"mohamed.kareem@gmail.com\",\r\n        \"phoneNumber\": \"01025667786\",\r\n        \"jobPosition\": \"Instructor\",\r\n        \"hireDate\": \"2020-03-20\"\r\n    }\r\n}\r\n",
+							"raw": "{\r\n    \"biography\": \"Mohamed Kareem is a Trainer with over 5 years of experience in Python and Machine Learning.\",\r\n    \"staff\": {\r\n        \"firstName\": \"Mohamed\",\r\n        \"lastName\": \"Kareem\",\r\n        \"email\": \"mohamed.kareem2@gmail.com\",\r\n        \"phoneNumber\": \"01025667786\",\r\n        \"jobPosition\": \"Instructor\",\r\n        \"hireDate\": \"2020-03-20\"\r\n    }\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -333,7 +333,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\" : 5,\r\n    \"biography\": \"Mohamed Kareem is a Trainer with over 7 years of experience in Python and Machine Learning.\"\r\n}\r\n",
+							"raw": "{\r\n    \"id\" : 8,\r\n    \"staff\":{\r\n        \"id\":11\r\n    },\r\n    \"biography\": \"Mohamed Kareem is a Trainer with over 4 years of experience in Python and Machine Learning.\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -382,7 +382,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8081/instructors/instructor/courses?instructorId=3",
+							"raw": "http://localhost:8081/instructors/instructor/courses?instructorId=2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -396,7 +396,7 @@
 							"query": [
 								{
 									"key": "instructorId",
-									"value": "3"
+									"value": "2"
 								}
 							]
 						}
@@ -526,6 +526,33 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Course Instructors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/courses/course/instructors?courseId=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"courses",
+								"course",
+								"instructors"
+							],
+							"query": [
+								{
+									"key": "courseId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -646,6 +673,101 @@
 								"sessions",
 								"delete",
 								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Assignment",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/assignments/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"assignments",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/assignments/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"assignments",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateAssignment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"course\":{\r\n        \"id\":1\r\n    },\r\n    \"title\": \"Build a Linear Regression model\",\r\n    \"description\": \" Linear Regression model to predict house prices\",\r\n    \"dueDate\": \"2025-05-26\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/assignments/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"assignments",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/assignments/delete/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"assignments",
+								"delete",
+								"7"
 							]
 						}
 					},

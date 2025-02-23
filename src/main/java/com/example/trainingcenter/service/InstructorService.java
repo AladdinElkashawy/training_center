@@ -12,5 +12,6 @@ public interface InstructorService {
     Instructor addInstructor(Instructor instructor);
     Instructor updateInstructor(Instructor instructor);
     void deleteInstructor(int id);
+    List<Instructor> getCourseInstructors(int course_id);
 }
 
