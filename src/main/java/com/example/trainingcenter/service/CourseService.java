@@ -13,4 +13,5 @@ public interface CourseService {
     Course updateCourse(Course course);
     void deleteCourse(int id);
     List<Course> getInstructorCourses(int instructor_id);
+    List<Course> getStudentCourses(int student_id);
 }

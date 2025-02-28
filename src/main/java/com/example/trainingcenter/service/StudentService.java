@@ -1,5 +1,6 @@
 package com.example.trainingcenter.service;
 
+import com.example.trainingcenter.entity.Enrollment;
 import com.example.trainingcenter.entity.Student;
 import com.example.trainingcenter.exception.EmailExistException;
 import org.springframework.stereotype.Service;

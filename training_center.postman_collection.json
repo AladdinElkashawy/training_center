@@ -127,6 +127,33 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "get Student Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/students/student/courses?student_id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"students",
+								"student",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "student_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -768,6 +795,159 @@
 								"assignments",
 								"delete",
 								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAssignment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":8,\r\n    \"course\":{\r\n        \"id\":1\r\n    },\r\n    \"title\": \"Build a Linear Regression model\",\r\n    \"description\": \" Linear Regression model to predict house prices\",\r\n    \"dueDate\": \"2025-04-14\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/assignments/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"assignments",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Enrollment",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/enrollment/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"enrollment",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEnrollmentById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/enrollment/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"enrollment",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add Enrollment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " { \r\n        \"student\":{\r\n            \"id\":1\r\n        },\r\n        \"enrollmentDate\": \"2025-02-28\",\r\n        \"status\": \"active\",\r\n     \"course\":{\r\n            \"id\":4\r\n        }\r\n        \r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/enrollment/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"enrollment",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Enrollment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " { \r\n        \"student\":{\r\n            \"id\":1\r\n        },\r\n        \"id\":15,\r\n        \"enrollmentDate\": \"2025-02-27\",\r\n        \"status\": \"active\",\r\n     \"course\":{\r\n            \"id\":4\r\n        }\r\n        \r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/enrollment/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"enrollment",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Enrollment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/enrollment/delete/17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"enrollment",
+								"delete",
+								"17"
 							]
 						}
 					},
