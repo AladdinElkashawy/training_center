@@ -1,13 +1,16 @@
 package com.example.trainingcenter.service;
 
+import com.example.trainingcenter.entity.Enrollment;
 import com.example.trainingcenter.entity.Student;
 import com.example.trainingcenter.exception.EmailExistException;
 import com.example.trainingcenter.exception.StudentNotFoundException;
+import com.example.trainingcenter.repository.EnrollmentRepository;
 import com.example.trainingcenter.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,6 +18,9 @@ import java.util.Optional;
 public class StudentServiceImpl implements StudentService {
     @Autowired
     StudentRepository studentRepository;
+
+    @Autowired
+    EnrollmentRepository enrollmentRepository;
 
     @Override
     public Student getStudentById(int id) {
@@ -24,6 +30,17 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public List<Student> getAllStudents() {
         return studentRepository.findAll();
+    }
+
+    @Override
+    public List<Student> getCourseStudents(int course_id) {
+        List<Enrollment> courseStudents = enrollmentRepository.findByCourseId(course_id);
+        List<Student> students = new ArrayList<>();
+        for(Enrollment student : courseStudents){
+            Optional<Student> studentData = studentRepository.findById(student.getStudent().getId());
+            students.add(studentData.orElseThrow());
+        }
+        return students;
     }
 
     @Override

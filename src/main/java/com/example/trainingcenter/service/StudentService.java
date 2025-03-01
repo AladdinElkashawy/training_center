@@ -11,6 +11,7 @@ import java.util.List;
 public interface StudentService {
 Student getStudentById(int id);
 List<Student> getAllStudents();
+List<Student> getCourseStudents(int course_id);
 Student addStudent(Student student) throws EmailExistException;
 Student updateStudent(Student student) throws EmailExistException;
 void deleteStudent(int id);

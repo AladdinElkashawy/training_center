@@ -2,8 +2,10 @@ package com.example.trainingcenter.controller;
 
 import com.example.trainingcenter.entity.Course;
 import com.example.trainingcenter.entity.Instructor;
+import com.example.trainingcenter.entity.Student;
 import com.example.trainingcenter.service.CourseService;
 import com.example.trainingcenter.service.InstructorService;
+import com.example.trainingcenter.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +21,9 @@ public class CourseController {
     @Autowired
     InstructorService instructorService;
 
+    @Autowired
+    StudentService studentService;
+
     @GetMapping("/{id}")
     Course getCourseById(@PathVariable int id){
         return courseService.getCourseById(id);
@@ -30,8 +35,13 @@ public class CourseController {
     }
 
     @GetMapping("/course/instructors")
-    List<Instructor> getAllInstructorCourses(@RequestParam int courseId){
+    List<Instructor> getAllCourseInstructors(@RequestParam int courseId){
         return instructorService.getCourseInstructors(courseId);
+    }
+
+    @GetMapping("/course/students")
+    List<Student> getCourseStudents(@RequestParam int course_id){
+        return studentService.getCourseStudents(course_id);
     }
 
     @PostMapping("/add")

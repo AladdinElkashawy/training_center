@@ -580,6 +580,33 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "get Course Students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/courses/course/students?course_id=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"courses",
+								"course",
+								"students"
+							],
+							"query": [
+								{
+									"key": "course_id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -948,6 +975,130 @@
 								"enrollment",
 								"delete",
 								"17"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "StudentAssignment",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/student_assignment/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"student_assignment",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/student_assignment/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"student_assignment",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Student_Assignment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"student\": {\r\n        \"id\": 1\r\n    },\r\n    \"assignment\": {\r\n        \"id\": 5\r\n    },\r\n    \"submitDate\": \"2025-03-03\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/student_assignment/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"student_assignment",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student_Assignment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"student\": {\r\n        \"id\": 1\r\n    },\r\n    \"assignment\": {\r\n        \"id\": 5\r\n    },\r\n    \"id\": 6,\r\n    \"submitDate\": \"2025-03-05\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/student_assignment/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"student_assignment",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Student_Assignment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/student_assignment/delete/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"student_assignment",
+								"delete",
+								"7"
 							]
 						}
 					},
