@@ -20,7 +20,7 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
     @Autowired
-    private UserService userService;
+    public UserService userService;
 
     @Bean
     public AuthenticationProvider authenticationProvider() {
@@ -41,14 +41,14 @@ public class SecurityConfig {
         return http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-//                        .requestMatchers("/assignments/**").hasRole("ADMIN")
+                        .requestMatchers("/assignments/**").hasRole("ADMIN")
                         .requestMatchers("/courses/**").hasRole("ADMIN")
-//                        .requestMatchers("/enrollment/**").hasRole("ADMIN")
-//                        .requestMatchers("/instructors/**").hasRole("ADMIN")
-//                        .requestMatchers("/sessions/**").hasRole("ADMIN")
-//                        .requestMatchers("/staffs/**").hasRole("ADMIN")
-//                        .requestMatchers("/student_assignment/**").hasRole("ADMIN")
-//                        .requestMatchers("/students/**").hasRole("ADMIN")
+                        .requestMatchers("/enrollment/**").hasRole("ADMIN")
+                        .requestMatchers("/instructors/**").hasRole("ADMIN")
+                        .requestMatchers("/sessions/**").hasRole("ADMIN")
+                        .requestMatchers("/staffs/**").hasRole("ADMIN")
+                        .requestMatchers("/student_assignment/**").hasRole("ADMIN")
+                        .requestMatchers("/students/**").hasRole("ADMIN")
                         .requestMatchers("/Account/create").permitAll()
                         .anyRequest().authenticated()
                 )

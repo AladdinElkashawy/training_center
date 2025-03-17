@@ -37,6 +37,8 @@ public class Users implements UserDetails {
 	private String authorities;
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return Arrays.stream(this.authorities.split(",")).map(SimpleGrantedAuthority::new).collect(Collectors.toList());
+		return Arrays.stream(this.authorities.split(","))
+				.map(role -> new SimpleGrantedAuthority("ROLE_" + role.trim()))
+				.collect(Collectors.toList());
 	}
 }
